@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PR04</title>
+        <script type="text/javascript">
+
+            function dibuixa() {
+                // Recórrer totes les imatges
+                for (var i=0;i<document.images.length;i++){
+                    // No afegir cap llenç a la imatge del marc
+                    console.log("0");
+                    if (document.images[i].getAttribute('id')!='frame'){
+
+                        // Crear element canvas
+                        canvas = document.createElement('canvas');
+                        canvas.setAttribute('width',132);
+                        canvas.setAttribute('height',150);
+                        // Insereix abans de la imatge
+                        document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+                        ctx = canvas.getContext('2d');
+                        // Dibuixa la imatge al llenç
+                        ctx.drawImage(document.images[i],15,20);
+                        // Afegir el marc
+                        ctx.drawImage(document.getElementById('frame'),0,0);
+                        console.log("1");
+                        }
+                }
+            }
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        <canvas id="canvas"></canvas>
+    </body>
+</html>
