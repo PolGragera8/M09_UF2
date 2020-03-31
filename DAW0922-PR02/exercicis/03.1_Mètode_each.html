@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ca">
+    <meta charset="UTF-8">
+    <head>
+        <title>03-El mètode each: explicació</title>
+        <script type = "text/javascript" src = "jquery-2.1.3.min.js"> </script> 
+        <script type = "text/javascript">
+           // Fixeu-vos en el codi
+            var arr = [ "uno", "dos", "tres" ];
+            var obj = { uno: 1, dos: 2, tres: 3 };
+ 
+            jQuery.each( arr, function( i, val ) {
+               $( "#" + val ).text( "Mine is " + val + "." );
+               return ( val !== "three" );
+            });
+ 
+            jQuery.each( obj, function( i, val ) {
+               $( "#" + i ).append( document.createTextNode( " - " + val ) );
+            });
+        </script>
+    </head>
+    <!--    El mètode each permet realitzar una iteració sobre cadascun dels elements
+            prèviament seleccionats. Fixeu-vos en el codi i el resultat a la consola del navegador, 
+            tant del Firefox com del Chrome.  -->
+    <body>
+       <p id="uno">Paràgraf 1</p>
+       <p id="dos">Paràgraf 2</p>
+       <p id="tres">Paràgraf 3</p>
+    </body>
+ </html>

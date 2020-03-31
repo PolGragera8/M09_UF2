@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <meta charset="UTF-8">
+    <head>
+      <title>10-Prova unwrap(), wrap(), wrapAll() i wrapInner()</title>
+        <script type = "text/javascript" src = "jquery-2.1.3.min.js"></script>  
+        <script type = "text/javascript">
+            // Poseu aquí el codi pertinent.
+            
+        </script>
+         <style>
+            div { background:#58FAF4; }
+         </style>
+    </head>
+     <!--   Els següents mètodes permeten afegir o eliminar contingut o elements al voltant d'elements existents.
+            wrap(), unwrap(), wrapAll() i wrapInner(). Consulteu la pàgina de l'API jQuery i saber-ne els detalls.
+            En fer clic sobre el botó wrap, el que fem és envoltar cadascun dels paràgraf amb un bloc div i al mateix
+            temps deshabilitem tots els botons excepte el botó unwrap. A continuació polsem el botó unwrap i tornem
+            la pàgina amb el mateix aspecte que tenia abans d'obrir-la inicialment. Quan polsem sobre el botó wrapAll,
+            afegirem, en aquesta ocasió, un sol bloc div envoltant tots els paràgrafs. Al polsar, una altre vegada,
+            unwrap restablim la pàgina en el seu aspecte original. Per últim al fer clic sobre wrapInner posarem 
+            en negreta el contingut de cada paràgraf. Es a dir, el que envoltem és el contingut del paràgraf
+            i no el paràgraf sencer. Consell: utilitzeu els mètodes attr() i removeAttr() per habilitar i 
+            deshabilitar els botons. En Firefox utilitzeu l'inspector per comprovar els resultats en el codi.
+    -->
+    <body>
+      <p id="u">U</p>
+      <p id="dos">Dos</p>
+      <input type="button" value="wrap" id="b_wrap"/>
+      <input type="button" value="unwrap" id="b_unwrap" disabled="true"/>
+      <input type="button" value="wrapAll" id="b_wrapAll"/>
+      <input type="button" value="wrapInner" id="b_wrapInner"/>
+   </body>
+</html>

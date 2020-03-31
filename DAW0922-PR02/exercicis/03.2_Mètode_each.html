@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ca">
+    <meta charset="UTF-8">
+    <head>
+        <title>03-El mètode each:</title>
+        <script type = "text/javascript" src = "jquery-2.1.3.min.js"> </script> 
+        <script type = "text/javascript">
+          // Poseu aquí el codi pertinent.
+            
+                $("div").each(function(indice,elemento){
+                  $(elemento).text("("+ indice + ") tratant el valor (" + elemento + ")");
+                });
+	            
+        </script>
+    </head>
+    <!--    Igual que l'exercici 3.1 hem d'utilitzar el mètode "each" per obtenir aquest resultat
+            a la consola del navegador, en el nostre cas amb el Firefox:
+
+            "(0) tratant el valor (Dilluns)"        03.2_M%C3%A8tode_each.html:11
+            "(1) tratant el valor (Dimarts)"        03.2_M%C3%A8tode_each.html:11
+            "(2) tratant el valor (Dimecres)"       03.2_M%C3%A8tode_each.html:11
+            "(3) tratant el valor (Dijous)"         03.2_M%C3%A8tode_each.html:11
+            "(4) tratant el valor (Divendres)"      03.2_M%C3%A8tode_each.html:11
+              -->
+    <body>
+        <div >Dilluns</div>
+        <div >Dimarts</div>
+        <div >Dimecres</div>
+        <div >Dijous</div>
+        <div >Divendres</div>
+        <div >Dissabte</div>
+        <div >Diumenge</div>
+        
+    </body>
+ </html>

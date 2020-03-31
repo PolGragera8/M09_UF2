@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ca">
+    <meta charset="UTF-8">
+    <head>
+        <title>02-Funció jQuery:selector I</title>
+         <script type = "text/javascript" src = "jquery-2.1.3.min.js"> </script> 
+        <script type = "text/javascript">
+            // Poseu aquí el codi pertinent
+            $(document).ready(function(){
+                $("#boton").on("click",function(){
+                    
+                    $("#parrafo").css("color", "blue");
+                    $("#meuId").css("color","red");
+                    $(".mevaClasse").css("color","green");
+                
+                });
+            });
+        </script>
+    </head>
+     <!--   Hem de canviar el color de:
+            El text del paràgraf a color blau.
+            El "div" amb identificació de color vermell i,
+            el "div" amb classe de color verd  --> 
+    <body>
+        <p id="parrafo">Això és un paràgraf</p>
+        <div id="meuId">Això és un bloc div amb identificador</div>
+        <div class="mevaClasse">Això és un bloc div amb classe</div>
+        <p><input type="button" id="boton" value="Cambia de color"></p>
+    </body>
+ </html>

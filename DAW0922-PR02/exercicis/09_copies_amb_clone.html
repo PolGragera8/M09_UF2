@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ca">
+    <meta charset="UTF-8">
+   <head>
+      <title>09-Copies amb el mètode clone()</title>
+          <script type = "text/javascript" src = "jquery-2.1.3.min.js"> </script> 
+          <script type = "text/javascript">
+           // Poseu aquí el codi pertinent.
+
+        </script>
+        <style>
+           .classe1 { color:blue; }
+           .classe2 { color:green; }
+           .classe3 { color:red; }
+        </style>
+   </head>
+    <!--    De vagades és necessari copiar un o varis elements indicant si es desitgen també copiar
+            les seves dades i esdeveniments associats. El mètode clone() permet crear una còpia dels    
+            elements tractats.La seva sintaxi és: .clone([dadesIEsdeveniments]) o
+            .clone([dadesIEsdeveniments][, fillsDadesIEsdeveniments]). 
+            En l'exercici consisteix en clonar el primer bloc de tipus div dins del DIV «gral» posant
+            la còpia al final, darrere del div de .classe3 i canviant el seu contingut per el text "Final!!".
+            Consell: Potser us vindria be utilitzar els selectors :first i :last, 
+            i també els mètodes html() i apeendTo().
+            La sortida, desprès de polsar el botó, hauria de ser:
+
+                    U
+                    Dos
+                    Tres
+                    Final!!
+            amb l'últim del amteix color que el primer  -->
+    
+   <body>
+      <div id="gral">
+         <div class="classe1">U</div>
+         <div class="classe2">Dos</div>
+         <div class="classe3">Tres</div>
+      </div>
+      <input type="button" value="Clonar" id="botó"/>
+   </body>
+</html>

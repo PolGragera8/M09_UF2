@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ca">
+    <meta charset="UTF-8">
+    <head>
+       <title>07-Atributs de classe</title>
+       <script type = "text/javascript" src = "jquery-2.1.3.min.js"> </script>
+       <script type = "text/javascript">
+           // Poseu aquí el codi pertinent.
+           
+       </script>
+       <style>
+          .fons { background:#58FAF4; }
+          .marc { color: blue; 
+                   border-style:solid;
+                   border-width:3px;}
+       </style>
+    </head>
+     <!--   El mètodes que tractarem ens permeten obtenir i establir característiques relacionades
+            amb les classes existents al DOM. El mètode addClass() ens permet afegir una o varies classes
+            a un o varis elements. La seva sintaxi és: .addClass(nomClasse, [nomClasse]). 
+            El mètode removeClass() ens permet eliminar una o varies classes en els elements tractats. 
+            La seva sintaxi és: .removeClass(nomClasse). 
+            El mètode hasClass() ens permet comprovar si un elements posseeix o no una determinada classe.
+            La seva sintaxi és: .hassClass(nomClasse). 
+            En aquest exercici hem d'utilitzar aquests mètodes per aconseguir que quan es polsi 
+            sobre el botó «Fons», el fons del bloc id=»bloc» canvii el color del fons
+            afegint la classe .fons, i quan es torni a polsar l'elimini. 
+            El mateix farem amb el botó «Marc» i la classe .marc.
+            Consell: Utilitzem el esdeveniment clic amb estructures if-else
+. -->
+    
+    <body>
+       <div id="bloc">Bloc de prova</div>
+       <br>
+       <input type="button" value="Fons" id="bt_fons"/>
+       <input type="button" value="Marc" id="bt_marc"/>      
+    </body>
+</html>

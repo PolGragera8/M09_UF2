@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ca">
+    <meta charset="UTF-8">
+    <head>
+        <title>01-Primera prova amb jQuery</title>
+        <script type = "text/javascript" src = "jquery-2.1.3.min.js"> </script> 
+        <script type = "text/javascript">
+            // Poseu aquí el codi pertinent
+            $(function() {  
+                alert("Hola Món");  
+            });
+
+            $(document).ready(function(){
+                $("#boton").on("click",function(){
+	            $("#parrafo").css("color", "blue");
+                });
+            });
+        </script>
+    </head>
+    <!--    Hem de canviar el color de text que es troba en l'element "body" 
+            per que el mostri de color blau.
+            Consell: utilitzeu el mètode css -->
+    <body>
+        <p id="parrafo">Hola Món</p>
+        <p><input type="button" id="boton" value="Cambia de color"></p>
+    </body>
+ </html>

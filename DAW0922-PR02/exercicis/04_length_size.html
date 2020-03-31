@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ca">
+    <meta charset="UTF-8">
+     <head>
+         <title>04-La propietat length i el mètode size()</title>
+         <script type = "text/javascript" src = "jquery-2.1.3.min.js"> </script> 
+         <script type = "text/javascript">
+            // Poseu aquí el codi pertinent.
+            var number = 0;
+
+            function numbers() {
+                number = $('#links span').length + 1; 
+                return number;
+
+            }
+
+            $('#add').on('click', function(e) {
+                    e.preventDefault();
+                    var $numb = numbers();
+                    $('#links').append('<span number="'+ $numb +'">Link'+ $numb +'</span><br />'); 
+                    $('#elements').append('<div class="element">Element '+ $numb +'</div>'); 
+            });
+         
+         </script>
+     </head>
+    <!--    La propietat "length" emmagatzema el nombre d'elements existents en un objecte jQuery. 
+            Tant la propietat length com el mètode "size()" retornen el mateix resultat. 
+            La diferència és que la propietat emmagatzema el resultat i el mètode és més ràpid.
+            Heu d'esbrinar en nombre d'enllaços utilitzant, primer la propietat i després el mètode.
+            El resultat del codi que heu de fer és el següent a la consola, en aquest cas del Chrome:
+
+            Nombre d'enllaços en el document: propietat length -> (4).      04_length_size.html:9 
+            Nombre d'enllaços en el document: mètode size() -> (4).         04_length_size.html:10 -->
+
+    <body>
+        <input id="add" type="button" value="Add"> 
+    <div id="links"></div>
+    <div id="elements"></div>    
+    </body>
+ </html>
