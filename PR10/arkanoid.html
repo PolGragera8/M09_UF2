@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ca">
+	<head>
+		<meta charset="utf-8">
+		<title>ARKANOID</title>
+		<!-- Carreguem les fonts externes -->
+		<link href='http://fonts.googleapis.com/css?family=Caesar+Dressing|Englebert|Capriola&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+		<!-- Carreguem la llibreria externa jQuery -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+		<!-- Afegim propietats d'estil als elements html -->
+		<style>
+			.cesar{font-family: 'Caesar Dressing', cursive;}
+			.englebert{font-family: 'Englebert', sans-serif;}
+			.capriola{font-family: 'Capriola', sans-serif;}
+
+			body{text-align: center;font-family: 'Capriola', sans-serif;background-color:black;}
+			header.cesar{font-size:40px; color: white;text-shadow:2px 2px 5px blue; }
+			h4{margin-top: -30px;}
+			header{color: red;margin-bottom:40px;}
+			canvas{ margin: 10px auto; border:5px solid red;}
+		</style>
+	</head>
+	<body>
+		<header>Pràctica DAW0922-PR10</header>
+		<section>
+			<header class="cesar">ARKANOID</header>
+			<h4>El joc legendari</h4>
+
+			<!-- El llenç amb l'element canvas de 300x300 píxels-->
+			<canvas id="canvas" width="300" height="300">
+				El teu navegador NO és compatible amb l'element Canvas d'HTML5
+			</canvas>
+
+		</section>
+		<footer class="englebert"><h5>Departament Informàtica - INS. La Pineda-2013</h5></footer>
+
+		<!-- El codi del joc Arkanoid -->
+		<script src="arkanoid.js"></script>
+
+	</body>
+</html>
