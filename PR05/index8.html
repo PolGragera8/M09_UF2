@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PR05</title>
+        <script type="text/javascript">
+
+function dibuixa() {
+var ctx = document.getElementById('canvas').getContext('2d');
+// Netejar o esborrar el llenç (canvas).
+ctx.clearRect(0,0,150,150);
+// Dibuixar les guies.
+ctx.strokeStyle = '#09f';
+ctx.lineWidth = 2;
+ctx.strokeRect(-5,50,160,50);
+// Establir els estils de línia.
+ctx.strokeStyle = '#000';
+ctx.lineWidth = 10;
+// Comprovar les dades introduïdes
+if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
+ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+} else {
+alert('El valor ha de ser un nombre positiu');
+}
+// Dibuixar les línies
+ctx.beginPath();
+ctx.moveTo(0,100);
+for (i=0;i<24;i++){
+var dy = i%2==0 ? 25 : -25 ;
+ctx.lineTo(Math.pow(i,1.5)*2,75+dy);
+}
+ctx.stroke();
+return false;
+}
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        <canvas id="canvas"></canvas>
+    </body>
+</html>

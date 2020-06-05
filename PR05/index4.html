@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PR05</title>
+        <script type="text/javascript">
+
+function dibuixa() {
+var ctx = document.getElementById('canvas').getContext('2d');
+// Dibuixar el fons
+ctx.fillStyle = '#FD0';
+ctx.fillRect(0,0,75,75);
+ctx.fillStyle = '#6C0';
+ctx.fillRect(75,0,75,75);
+ctx.fillStyle = '#09F';
+ctx.fillRect(0,75,75,75);
+ctx.fillStyle = '#F30';
+ctx.fillRect(75,75,150,150);
+ctx.fillStyle = '#FFF';
+// Establir el valor de la transparència
+ctx.globalAlpha = 0.2;
+// Dibuixar cercles semi transparents
+for (i=0;i<7;i++){
+ctx.beginPath();
+ctx.arc(75,75,10+10*i,0,Math.PI*2,true);
+ctx.fill();
+}
+}
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        <canvas id="canvas"></canvas>
+    </body>
+</html>
