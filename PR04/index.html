@@ -6,6 +6,7 @@
         <script type="text/javascript">
 
             function dibuixa() {
+                console.log("1");
                 // Recórrer totes les imatges
                 for (var i=0;i<document.images.length;i++){
                     // No afegir cap llenç a la imatge del marc
@@ -31,6 +32,6 @@
         </script>
     </head>
     <body onload="dibuixa();">
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" width="150" height="150"></canvas>
     </body>
 </html>

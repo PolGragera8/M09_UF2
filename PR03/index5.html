@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tutorial de Canvas</title>
+        <script type="text/javascript">
+            
+            function dibuixa(){
+                var ctx = document.getElementById('canvas').getContext('2d');
+                // Triangle farcit
+                ctx.beginPath();
+                ctx.moveTo(25,25);
+                ctx.lineTo(105,25);
+                ctx.lineTo(25,105);
+                ctx.fill();
+                // Triangle traçat
+                ctx.beginPath();
+                ctx.moveTo(125,125);
+                ctx.lineTo(125,45);
+                ctx.lineTo(45,125);
+                ctx.closePath();
+                ctx.stroke();
+            }
+            
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        
+            <canvas id="canvas" width="150" height="150"></canvas>
+            
+    </body>
+</html>

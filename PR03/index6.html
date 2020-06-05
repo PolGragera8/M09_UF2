@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tutorial de Canvas</title>
+        <script type="text/javascript">
+            
+            function dibuixa(){
+                var ctx = document.getElementById('canvas').getContext('2d');
+                for(var i=0;i<4;i++){
+                for(var j=0;j<3;j++){
+                ctx.beginPath();
+                var x = 25+j*50; // Coordenada x
+                var y = 25+i*50; // Coordenada y
+                var radi = 20; // Radi de l'arc
+                var iniciAngle = 0; // Punt d'inici del cercle
+                var fiAngle = Math.PI+(Math.PI*j)/2; // Punt final del cercle
+                var antihorari = i%2==0 ? false : true; // Sentit horari o anti horari
+                ctx.arc(x,y,radi,iniciAngle,fiAngle, antihorari);
+                if (i>1){
+                    ctx.fill();
+                } else {
+                    ctx.stroke();
+                }
+                }
+            }
+        }
+            
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        
+            <canvas id="canvas" width="150" height="150"></canvas>
+            
+    </body>
+</html>
