@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PR06</title>
+        <script type="text/javascript">
+
+
+function dibuixa() {
+var ctx = document.getElementById('canvas').getContext('2d');
+ctx.strokeStyle = "#fc0";
+ctx.lineWidth = 1.5;
+ctx.fillRect(0,0,300,300);
+// Escalat uniforme
+ctx.save()
+ctx.translate(50,50);
+dibuixaEspirograf(ctx,22,6,5); // sense escalat
+ctx.translate(100,0);
+ctx.scale(0.75,0.75);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.translate(133.333,0);
+ctx.scale(0.75,0.75);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.restore();
+// Escalat no uniforme (en la direcció y)
+ctx.strokeStyle = "#0cf";
+ctx.save()
+ctx.translate(50,150);
+ctx.scale(1,0.75);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.translate(100,0);
+ctx.scale(1,0.75);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.translate(100,0);
+ctx.scale(1,0.75);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.restore();
+// Escalat no uniforme (en la direcció x)
+ctx.strokeStyle = "#cf0";
+ctx.save()
+ctx.translate(50,250);
+ctx.scale(0.75,1);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.translate(133.333,0);
+ctx.scale(0.75,1);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.translate(177.777,0);
+ctx.scale(0.75,1);
+dibuixaEspirograf(ctx,22,6,5);
+ctx.restore();
+}
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        <canvas id="canvas" height="300" width="300"></canvas>
+    </body>
+</html>

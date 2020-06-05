@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PR06</title>
+        <script type="text/javascript">
+
+function dibuixa() {
+var ctx = document.getElementById('canvas').getContext('2d');
+ctx.fillRect(0,0,150,150); // Dibuixa un rectangle amb els paràmetres per
+defecte
+ctx.save(); // Desa l'estat per defecte
+ctx.fillStyle = '#09F' // Fes canvis als paràmetres
+ctx.fillRect(15,15,120,120); // Dibuixa un rectangle amb els nous paràmetres
+ctx.save(); // Desa l'estat actual
+ctx.fillStyle = '#FFF' // Fes canvis als paràmetres
+ctx.globalAlpha = 0.5;
+ctx.fillRect(30,30,90,90); // Dibuixa un rectangle amb els nous paràmetres
+ctx.restore(); // Restaura l'estat anterior
+ctx.fillRect(45,45,60,60); // Dibuixa un rectangle amb els paràmetres restaurats
+ctx.restore(); // Restaura l'estat original
+ctx.fillRect(60,60,30,30); // Dibuixa un rectangle amb els paràmetres restaurats
+}
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        <canvas id="canvas" height="300" width="300"></canvas>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PR06</title>
+        <script type="text/javascript">
+
+function draw() {
+var ctx = document.getElementById('canvas').getContext('2d');
+ctx.translate(75,75);
+for (var i=1;i<6;i++){ // Desplaçar els anells (des de dins cap a fora)
+ctx.save();
+ctx.fillStyle = 'rgb('+(51*i)+','+(255-51*i)+',255)';
+for (var j=0;j<i*6;j++){ // Dibuixar punts individuals
+ctx.rotate(Math.PI*2/(i*6));
+ctx.beginPath();
+ctx.arc(0,i*12.5,5,0,Math.PI*2,true);
+ctx.fill();
+}
+ctx.restore();
+}
+}
+
+        </script>
+    </head>
+    <body onload="draw();">
+        <canvas id="canvas" height="300" width="300"></canvas>
+    </body>
+</html>
