@@ -6,32 +6,24 @@
         <script type="text/javascript">
 
             function dibuixa() {
-                console.log("1");
-                // Recórrer totes les imatges
-                for (var i=0;i<document.images.length;i++){
-                    // No afegir cap llenç a la imatge del marc
-                    console.log("0");
-                    if (document.images[i].getAttribute('id')!='frame'){
-
-                        // Crear element canvas
-                        canvas = document.createElement('canvas');
-                        canvas.setAttribute('width',132);
-                        canvas.setAttribute('height',150);
-                        // Insereix abans de la imatge
-                        document.images[i].parentNode.insertBefore(canvas,document.images[i]);
-                        ctx = canvas.getContext('2d');
-                        // Dibuixa la imatge al llenç
-                        ctx.drawImage(document.images[i],15,20);
-                        // Afegir el marc
-                        ctx.drawImage(document.getElementById('frame'),0,0);
-                        console.log("1");
-                        }
+                var ctx = document.getElementById('canvas').getContext('2d');
+                var img = new Image();
+                img.onload = function(){
+                    ctx.drawImage(img,0,0);
+                    ctx.beginPath();
+                    ctx.moveTo(30,96);
+                    ctx.lineTo(70,66);
+                    ctx.lineTo(103,76);
+                    ctx.lineTo(170,15);
+                    ctx.stroke();
                 }
-            }
+                img.src = 'imatges/backdrop.png';
+                }
 
         </script>
     </head>
     <body onload="dibuixa();">
         <canvas id="canvas" width="150" height="150"></canvas>
+        
     </body>
 </html>

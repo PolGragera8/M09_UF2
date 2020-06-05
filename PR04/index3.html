@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>PR04</title>
+        <script type="text/javascript">
+
+function dibuixa() {
+var ctx = document.getElementById('canvas').getContext('2d');
+var img = new Image();
+img.onload = function(){
+for (var i=0;i<4;i++){
+for (var j=0;j<3;j++){
+ctx.drawImage(img,j*50,i*38,50,38);
+}
+}
+};
+img.src = 'imatges/rhino.jpg';
+}
+function dibuixa() {
+var ctx = document.getElementById('canvas').getContext('2d');
+// Escapça la imatge
+ctx.drawImage(document.getElementById('source'),33,71,104,124,21,20,87,104);
+// Dibuija el marc
+ctx.drawImage(document.getElementById('frame'),0,0);
+}
+
+        </script>
+    </head>
+    <body onload="dibuixa();">
+        <canvas id="canvas" width="150" height="150"></canvas>
+        <img id="source" src="imatges/rhino.jpg" width="300" height="227" alt="" style="display:none">
+        <img id="frame" src="imatges/Canvas_picture_frame.png" width="132" height="150" alt="" style="display:none">
+    </body>
+</html>
